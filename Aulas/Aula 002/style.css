@@ -8,6 +8,13 @@ html, body{
     height: 100%;
 }
 
+.container{
+    width: 98%;
+    max-width: 1220px;
+    margin: 0 auto;
+    background-color: lightgray;
+}
+
 .box {
     border: 1px solid black;
     width: 33.3%;
@@ -16,9 +23,14 @@ html, body{
     float: left;
 }
 
-@media screen and (max-width: 500px){
-    .box{
-        width: 100%
+@media screen and (max-width: 768px) { 
+    .container{
+        text-align: center;
     }
-};
-    
+
+    .box {
+        float: none;
+        display: inline-block;
+        width: 40%;
+    }
+}
