@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+
+/*Divs em gerais*/
+.container{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+
+header{
+    background-color: #d6d6d6;
+    padding: 10px 0;
+}
+
+.logo_1{
+    float: left;
+    width: 100px;
+    height: 70px;
+    background-color: purple;
+}
+
+
+.logo_2{
+    float: right;
+    width: 100px;
+    height: 70px;
+    background-color:green;
+}
+
