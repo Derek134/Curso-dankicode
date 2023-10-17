@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+}   
+/*
+header {
+    height: 140px;
+    background-color: #ccc;
+}
+
+section {
+    height: 900px;
+    background-color: blue;
+}
+
+div {
+    height: calc(100% - 140px);
+    overflow-y: auto;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: orange;
+    height: 140px;
+} 
+*/
+
+section {
+    min-height: 900px;
+}
