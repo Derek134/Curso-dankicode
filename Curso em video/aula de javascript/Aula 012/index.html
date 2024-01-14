@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+          }
+      
+          h1 {
+            text-align: center;
+          }
+      
+          form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+      
+          input {
+            margin: 10px;
+          }
+      
+          button {
+            width: 100px;
+            height: 40px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+          }
+      
+          p {
+            font-size: 20px;
+            font-weight: bold;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>Verificar se é maior ou menor de idade</h1>
+        <form id="form">
+          <label for="data">Digite sua data de nascimento:</label>
+          <input type="date" id="data" name="data" required>
+          <button type="submit" id="botao">Verificar</button>
+        </form>
+        <p id="resultado"></p>
+        <script>
+          // Função para calcular a idade a partir da data de nascimento
+          function calcularIdade(data) {
+            var hoje = new Date();
+            var nascimento = new Date(data);
+            var idade = hoje.getFullYear() - nascimento.getFullYear();
+            var mes = hoje.getMonth() - nascimento.getMonth();
+            if (mes < 0 || (mes === 0 && hoje.getDate() < nascimento.getDate())) {
+              idade--;
+            }
+            return idade;
+          }
+      
+          // Função para verificar se é maior ou menor de idade
+          function verificarIdade() {
+            var data = document.getElementById("data").value;
+            var idade = calcularIdade(data);
+            var resultado = document.getElementById("resultado");
+            if (idade >= 18) {
+              resultado.innerHTML = "Você é maior de idade.";
+              resultado.style.color = "blue";
+            } else {
+              resultado.innerHTML = "Você é menor de idade.";
+              resultado.style.color = "red";
+            }
+          }
+      
+          // Adicionar um evento de clique ao botão
+          var botao = document.getElementById("botao");
+          botao.addEventListener("click", function(event) {
+            event.preventDefault(); // Evitar o recarregamento da página
+            verificarIdade(); // Chamar a função de verificar idade
+          });
+        </script>
+      </body>
+</html>
