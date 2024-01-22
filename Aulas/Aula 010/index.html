@@ -1,0 +1,16 @@
+<script>
+    var pessoa1 = new pessoa('Derek', '19',  function(){
+        alert('hey yo!');
+    });
+
+    pessoa1.peso();
+
+    function pessoa(nome,idade,peso){
+        this.nome = nome;
+        this.idade = idade;
+        this.peso = peso;
+        console.log(this.nome);
+        console.log(this.idade);
+        console.log(this.peso);
+    }
+</script>

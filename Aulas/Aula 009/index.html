@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1 id="main-text">Óla, </h1>
+    <div class="teste">
+        <p>óla!</p>
+    </div>
+        <p>Mundo!</p>
+    <script>
+        window.onload = function(){ 
+            
+            if (typeof(Storage) !== "undefine") {
+                alert('Seu navegador e compativel com storage');
+                initialize();
+            } else {
+                alert('Atualize seu navegador...');
+            }
+
+
+            function initialize(){
+                if (sessionStorage.getItem("nome") !== null){
+                alert("Óla, " + sessionStorage.nome + ", seja bem-vindo(a) de volta :) ");
+            }else{
+                alert("Óla! Essa e sua primeira visita no nosso site :)");
+                sessionStorage.nome = "Derek";
+            }
+            }
+            
+        }
+
+            /*
+            //documento carregado
+            var el = document.getElementById('main-text');
+            el.innerHTML = el.innerHTML + "Derek"
+
+            el.style.background = 'green'
+            el.style.marginLeft = '20px'
+            el.style.border = '3px solid black'
+
+            //var el2 = document.querySelector('p');
+
+            //el2.style.color = "red";
+
+            var elementos = document.querySelectorAll('p')
+
+            for(var i = 0; i < elementos.length; i++){
+                elementos[i].style.background = "gold"
+            }
+        } */
+    </script>
+</body>
+</html>
